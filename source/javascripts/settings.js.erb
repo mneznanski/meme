@@ -6,7 +6,7 @@ var MEME_SETTINGS = {
 
   // Universal font family for texts:
   // Note that you'll need to included quoted font names as you would in CSS, ie: '"Knockout 28 B"'.
-  fontFamily: 'Verdana',
+  fontFamily: '"Verdana"',
   // Font family options: set to empty array to disable font selector.
   // These options may also be formatted as {text:'Knockout', value:'"Knockout 28 B"'}.
   fontFamilyOpts: ['Arial', 'Georgia', 'Verdana'],
@@ -20,7 +20,7 @@ var MEME_SETTINGS = {
     {text: 'Large text', value: 36}
   ],
 
-  headlineText: 'Words go here', // Default headline text.
+  headlineText: 'Quote, statistic, or headline', // Default headline text.
   height: 378, // Canvas rendering height.
   imageScale: 1, // Background image scale.
   imageSrc: '', // Default background image path. MUST reside on host domain, or use base64 data.
@@ -48,20 +48,13 @@ var MEME_SETTINGS = {
 
   // Path to the watermark image source, or blank for no watermark:
   // Alternatively, use '<%= asset_data_uri("vox.png") %>' to populate the watermark with base64 data, avoiding Cross-Origin issues.
-  watermarkSrc: (localStorage && localStorage.getItem('meme_watermark')) || '<%= image_path("co.png") %>',
+  watermarkSrc: (localStorage && localStorage.getItem('meme_watermark')) || '<%= image_path("watermark/da.png") %>',
   
   // Watermark image options: set to empty array to disable watermark picker.
   // NOTE: only populate the "data" attributes with base64 data when concerned about Cross-Origin requests...
   // Otherwise, just leave "data" attributes blank and allow images to load from your server.
   watermarkOpts: [
-    {text: 'Chinook Observer', value: '<%= image_path("co.png") %>', data: '<%= asset_data_uri("co.png") %>'},
-    {text: 'Capital Press', value: '<%= image_path("cp.png") %>', data: ''},
-    {text: 'Coast Weekend', value: '<%= image_path("cw.png") %>', data: ''},
-    {text: 'Daily Astorian', value: '<%= image_path("da.png") %>', data: ''},
-    {text: 'East Oregonian', value: '<%= image_path("eo.png") %>', data: ''},
-    {text: 'Hermiston Herald', value: '<%= image_path("hh.png") %>', data: ''},
-    {text: 'Oregon Coast Today', value: '<%= image_path("oc.png") %>', data: ''},
-    {text: 'Wallowa County Chieftain', value: '<%= image_path("wc.png") %>', data: ''}
+    {text: 'Daily Astorian', value: '<%= image_path("watermark/da.png") %>', data: ''}
   ],
   width: 755 // Canvas rendering width.
 };
